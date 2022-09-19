@@ -29,7 +29,8 @@ let alumnos = [
     {nombre: "Martin", apellido: "Pablo", dni: 45239578, anio: 3, curso: "B", nota: 7}
 ];
 
-console.log("---------------------------------------------------------------");
+console.log("--Ejercicio 2----------------------------------------------");
+
 
 //Ejercicio 2
 //Crear una función “capitalizar” que recibe un string, hace la primera letra
@@ -41,7 +42,7 @@ const capitalizar = (str) =>{
 
 console.log(capitalizar("hola"));
 
-console.log("---------------------------------------------------------------");
+console.log("--Ejercicio 3----------------------------------------------");
 
 // Ejercicio 3
 // Crear una función “mostrarAlumno” que recibe un alumno y muestra su información
@@ -59,17 +60,20 @@ const mostrarAlumno = (alumno) =>{
 };
 
 console.log(mostrarAlumno(alumnos[3]));
+console.log("--Ejercicio 4----------------------------------------------");
 
-console.log("---------------------------------------------------------------");
 //Ejercicio 4
 //Utilizando “map” y la función “capitalizar”, capitalizar el nombre y el apellido
 //de todos los alumnos en el array.
 
-//const alumnosMap = alumnos.map((a)=>{
-    //a = alumnos.map;
-    //cons
-//});
+const alumnosMap = (alumnos.map((a)=>{
+    cap = capitalizar(a.nombre);
+    cap_ = capitalizar(a.apellido);
+    a = cap + " " + cap_;
+    return a;
+}));
 
-//console.log(alumnos_map);
+console.log(alumnosMap);
 
-console.log("---------------------------------------------------------------");
+console.log("--Ejercicio 5----------------------------------------------");
+
