@@ -19,14 +19,54 @@
 //repetirse 2 veces.
 
 let alumnos = [
-    {nombre: "Juan", apellido: "Gomez", dni: 46345678, anio: 4, curso: "A", nota: 8},
-    {nombre: "Pedro", apellido: "Ramirez", dni: 45343648, anio: 4, curso: "A", nota: 9},
-    {nombre: "Franco", apellido: "Gonzalez", dni: 47840678, anio: 5, curso: "A", nota: 6},
-    {nombre: "Matias", apellido: "Perez", dni: 46543876, anio: 5, curso: "A", nota: 3},
-    {nombre: "Gustavo", apellido: "Lopez", dni: 46080638, anio: 4, curso: "B", nota: 4},
-    {nombre: "Franco", apellido: "Rodriguez", dni: 45301679, anio: 4, curso: "B", nota: 5},
-    {nombre: "Pedro", apellido: "Martinez", dni: 47317695, anio: 3, curso: "B", nota: 6},
-    {nombre: "Martin", apellido: "Pablo", dni: 45239578, anio: 3, curso: "B", nota: 7}
+    {nombre: "Juan", 
+    apellido: "Gomez",
+    dni: 46345678, 
+    anio: 4, 
+    curso: "A", 
+    nota: 8},
+    {nombre: "Pedro", 
+    apellido: "Ramirez", 
+    dni: 45343648, 
+    anio: 4, 
+    curso: "A", 
+    nota: 9},
+    {nombre: "Franco", 
+    apellido: "Gonzalez", 
+    dni: 47840678,
+    anio: 5, 
+    curso: "A", 
+    nota: 6},
+    {nombre: "Matias", 
+    apellido: "Perez", 
+    dni: 46543876, 
+    anio: 5, 
+    curso: "A", 
+    nota: 3},
+    {nombre: "Gustavo", 
+    apellido: "Lopez", 
+    dni: 46080638, 
+    anio: 4, 
+    curso: "B",
+    nota: 4},
+    {nombre: "Franco",
+    apellido: "Rodriguez", 
+    dni: 45301679, 
+    anio: 4, 
+    curso: "B", 
+    nota: 5},
+    {nombre: "Pedro", 
+    apellido: "Martinez", 
+    dni: 47317695, 
+    anio: 3, 
+    curso: "B", 
+    nota: 6},
+    {nombre: "Martin", 
+    apellido: "Pablo", 
+    dni: 45239578, 
+    anio: 3, 
+    curso: "B", 
+    nota: 7}
 ];
 
 console.log("--Ejercicio 2----------------------------------------------");
@@ -77,3 +117,47 @@ console.log(alumnosMap);
 
 console.log("--Ejercicio 5----------------------------------------------");
 
+//Ejercicio 5
+//Utilizando "map" y la función "mostrarAlumno" mostrar a todos los alumnos el array
+
+(alumnos.map((alumno) =>{
+    mostrarAlumno(alumno);
+}));
+
+console.log(alumnos.map);
+
+console.log("--Ejercicio 6----------------------------------------------");
+
+//Utilizando "filter" y "map", mostrar unicamente los alumnos aprobados
+
+const alumnosAprobados  = alumnos.filter((alumnos) =>{
+    return (alumnos.nota >=6);
+}).map((alumnos)=>{
+    mostrarAlumno(alumnos);
+});
+
+console.log(alumnosAprobados);
+
+console.log("--Ejercicio 7----------------------------------------------")
+
+//Utilizando "filter" y "map", mostrar unicamente a los alumnos de 4° año
+
+const alumnosCuarto  = alumnos.filter((alumnos) =>{
+    return (alumnos.anio === 4);
+}).map((alumnos)=>{
+    mostrarAlumno(alumnos);
+});
+
+console.log(alumnosCuarto);
+
+console.log("--Ejercicio 8----------------------------------------------");
+
+//Utilizando "filter" y "map", mostrar unicamente los alumnos de curso "B"
+
+const alumnosB  = alumnos.filter((alumnos) =>{
+    return (alumnos.curso === "B");
+}).map((alumnos)=>{
+    mostrarAlumno(alumnos);
+});
+
+console.log(alumnosB);
